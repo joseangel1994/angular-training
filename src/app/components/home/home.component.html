@@ -4,9 +4,27 @@
             <h1 class="text-3xl font-bold text-gray-900">{{title}}</h1>
             <p class="mt-2 text-lg leading-8 text-gray-600">The best recipe app made with Angular and Tailwind CSS</p>
         </div>
+        <form>
+            <div class="mx-auto max-w-2xl flex items-center w-3/4 mt-5">
+                <input 
+                    class="flex-grow border rounded-l p-2 focus:outline-none"
+                    [(ngModel)]="searchValue"
+                    name="searchValue"
+                    placeholder="Search for recipes..." />
+                <button class="bg-green-400 text-white rounded-r p-2 px-4 hover:bg-green-600 transition duration-300">
+                    Search
+                </button>
+                <!-- <p class="ml-4">{{searchValue}}</p> -->
+            </div>
+        </form>
         <div
-            class="mx-auto mt-10 grid grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 max-w-none lg:grid-cols-3">
-            <app-recipe [recipe]="recipes[0]"></app-recipe>
+            class="mx-auto mt-5 grid grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 max-w-none lg:grid-cols-3">
+            <app-recipe *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe>
         </div>
     </div>
 </div>
+<div *ngIf="displayFooter" class="bg-green-50 w-full fixed bottom-0 p-3">
+    <p class="text-center">Made with love from Granada ❤</p>
+</div>
+
+

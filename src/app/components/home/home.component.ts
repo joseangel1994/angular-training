@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit {
   @Output() newConsoleEvent = new EventEmitter<string>();
 
   recipes: Array<Recipe> = recipesDummy;
+  searchValue: string = '';
+  displayFooter: boolean = true;
 
   constructor() { }
 
