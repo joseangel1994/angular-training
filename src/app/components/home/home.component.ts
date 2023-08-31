@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { recipesDummy } from 'src/app/dummy-data';
 import { Recipe } from 'src/app/interfaces/Recipe';
 import { RecipeService } from 'src/app/services/recipe.service';
@@ -10,23 +12,20 @@ import { RecipeService } from 'src/app/services/recipe.service';
 })
 export class HomeComponent implements OnInit {
 
-  @Input() title!: string;
-
-  @Output() newConsoleEvent = new EventEmitter<string>();
-
   recipes: Array<Recipe> = recipesDummy;
   searchValue: string = '';
   displayFooter: boolean = true;
 
-  constructor(private recipeService: RecipeService) { }
+  title = 'My Recipes';
+
+  constructor(private recipeService: RecipeService, private router: Router) { }
 
   ngOnInit(): void {
     this.recipes = this.recipeService.getRecipes();
-    this.addNewConsoleMessage();
   }
 
-  addNewConsoleMessage() {
-    this.newConsoleEvent.emit('Ey, listen!');
+  goToAbout() {
+    this.router.navigate(['/about']);
   }
 
 }
