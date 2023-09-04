@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RecipeDetailsComponent } from './components/recipe-details/recipe-details.component';
 import { AboutComponent } from './components/about/about.component';
 import { AddRecipeReactiveComponent } from './components/add-recipe-reactive/add-recipe-reactive.component';
+import { AddRecipeTemplateDrivenComponent } from './components/add-recipe-template-driven/add-recipe-template-driven.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddRecipeReactiveComponent } from './components/add-recipe-reactive/add
     RecipeComponent,
     RecipeDetailsComponent,
     AboutComponent,
-    AddRecipeReactiveComponent
+    AddRecipeReactiveComponent,
+    AddRecipeTemplateDrivenComponent
   ],
   imports: [
     BrowserModule,

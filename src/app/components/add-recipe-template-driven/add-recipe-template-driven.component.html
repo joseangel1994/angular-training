@@ -1,0 +1,49 @@
+<div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6">
+        <div class="mx-auto max-w-2xl flex flex-col items-center">
+            <h1 class="text-3xl font-bold text-gray-900">Add new recipe</h1>
+            <p class="mt-2 text-lg leading-8 text-gray-600">This information will be used to create a new recipe</p>
+        </div>
+        <form (ngSubmit)="submitNewRecipe()" #recipeForm="ngForm">
+            <div class="mx-auto max-w-2xl flex flex-col items-center w-3/4 mt-5">
+                <div class="w-64 mb-5">
+                    <label for="mainIngredient" class="block text-sm font-medium leading-6 text-gray-900">Main ingredient</label>
+                    <div class="mt-2">
+                      <input id="mainIngredient" [(ngModel)]="newRecipe.mainIngredient" name="mainIngredient" #mainIngredient="ngModel" required type="text" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6">
+                    </div>
+                    <span class="text-red-600"
+                        *ngIf="!mainIngredient.valid && submitted">
+                           Main ingredient is required 
+                    </span>
+                  </div>
+          
+                  <div class="w-64 mb-5">
+                    <label for="allergie" class="block text-sm font-medium leading-6 text-gray-900">Allergie</label>
+                    <div class="mt-2">
+                      <select id="allergie" [(ngModel)]="newRecipe.allergie" name="allergie" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                        <option>Nothing</option>
+                        <option>Milk</option>
+                        <option>Eggs</option>
+                        <option>Gluten</option>
+                      </select>
+                    </div>
+                  </div>
+          
+                  <div class="w-64">
+                    <label for="numberOfPeople" class="block text-sm font-medium leading-6 text-gray-900">Number of people</label>
+                    <div class="mt-2">
+                      <input type="number" id="numberOfPeople" [(ngModel)]="newRecipe.numberOfPeople" name="numberOfPeople" #numberOfPeople="ngModel" required min="1" class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6">
+                    </div>
+                    <span class="text-red-600"
+                        *ngIf="!numberOfPeople.valid && submitted">
+                            Number of people is required and greater than 0 
+                    </span>
+                  </div>
+                  <div class="mt-6 flex items-center justify-end gap-x-6">
+                    <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
+                    <button type="submit" class="rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">Save</button>
+                  </div>
+            </div>
+        </form>
+    </div>
+</div>

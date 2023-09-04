@@ -32,4 +32,8 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/recipe/add-reactive']);
   }
 
+  navigateToNewRecipeTemplateDriven() {
+    this.router.navigate(['/recipe/add-template-driven']);
+  }
+
 }
