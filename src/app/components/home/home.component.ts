@@ -24,8 +24,12 @@ export class HomeComponent implements OnInit {
     this.recipes = this.recipeService.getRecipes();
   }
 
-  goToAbout() {
+  navigateToAbout() {
     this.router.navigate(['/about']);
+  }
+
+  navigateToNewRecipeReactive() {
+    this.router.navigate(['/recipe/add-reactive']);
   }
 
 }
