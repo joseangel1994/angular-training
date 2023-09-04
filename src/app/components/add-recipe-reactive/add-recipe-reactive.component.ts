@@ -7,13 +7,17 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-recipe-reactive.component.css']
 })
 export class AddRecipeReactiveComponent implements OnInit {
+  submitted: boolean = false;
 
   newRecipeForm = new FormGroup({
     mainIngredient: new FormControl('', [
       Validators.required
     ]),
-    numberOfPeople: new FormControl(0),
-    allergie: new FormControl('')
+    allergie: new FormControl('Nothing'),
+    numberOfPeople: new FormControl(0, [
+      Validators.required,
+      Validators.min(1)
+    ])
   });
 
   constructor() { }
@@ -22,10 +26,11 @@ export class AddRecipeReactiveComponent implements OnInit {
   }
 
   submitNewRecipe() {
+    this.submitted = true;
     if(this.newRecipeForm.valid) {
       console.log(`New recipe received: mainIngredient: ${this.newRecipeForm.value.mainIngredient}, numberOfPeople: ${this.newRecipeForm.value.numberOfPeople}, allergie: ${this.newRecipeForm.value.allergie}.`);
     } else {
-      console.log('Form is invalid, please check the fields again')
+      console.log('Form is invalid, please check the fields again');
     }
   }
 
