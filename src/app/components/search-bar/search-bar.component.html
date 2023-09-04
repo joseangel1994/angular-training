@@ -1,0 +1,13 @@
+<form>
+    <div class="mx-auto max-w-2xl flex items-center w-3/4 mt-5">
+        <input 
+            class="flex-grow border rounded-l p-2 focus:outline-none"
+            [(ngModel)]="searchValue"
+            name="searchValue"
+            placeholder="Search for recipes..." />
+        <button class="bg-green-500 text-white rounded-r p-2 px-4 hover:bg-green-600 transition duration-300" (click)="searchRecipe()">
+            Search
+        </button>
+        <!-- <p class="ml-4">{{searchValue}}</p> -->
+    </div>
+</form>

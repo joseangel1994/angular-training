@@ -11,6 +11,7 @@ import { RecipeDetailsComponent } from './components/recipe-details/recipe-detai
 import { AboutComponent } from './components/about/about.component';
 import { AddRecipeReactiveComponent } from './components/add-recipe-reactive/add-recipe-reactive.component';
 import { AddRecipeTemplateDrivenComponent } from './components/add-recipe-template-driven/add-recipe-template-driven.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AddRecipeTemplateDrivenComponent } from './components/add-recipe-templa
     RecipeDetailsComponent,
     AboutComponent,
     AddRecipeReactiveComponent,
-    AddRecipeTemplateDrivenComponent
+    AddRecipeTemplateDrivenComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,

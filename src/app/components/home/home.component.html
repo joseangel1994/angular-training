@@ -10,19 +10,7 @@
             <button type="button" class="rounded-md bg-green-500 px-3 py-2 text-sm font-semibold text-white" (click)="navigateToNewRecipeReactive()">Add recipe (Reactive)</button>
             <button type="button" class="rounded-md bg-green-500 px-3 py-2 text-sm font-semibold text-white" (click)="navigateToNewRecipeTemplateDriven()">Add recipe (Template-Driven)</button>
         </div>
-        <form>
-            <div class="mx-auto max-w-2xl flex items-center w-3/4 mt-5">
-                <input 
-                    class="flex-grow border rounded-l p-2 focus:outline-none"
-                    [(ngModel)]="searchValue"
-                    name="searchValue"
-                    placeholder="Search for recipes..." />
-                <button class="bg-green-500 text-white rounded-r p-2 px-4 hover:bg-green-600 transition duration-300">
-                    Search
-                </button>
-                <!-- <p class="ml-4">{{searchValue}}</p> -->
-            </div>
-        </form>
+            <app-search-bar (searchRecipeEvent)="filterRecipes($event)"></app-search-bar>
         <div
             class="mx-auto mt-5 grid grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 max-w-none lg:grid-cols-3">
             <app-recipe *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe>

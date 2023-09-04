@@ -13,7 +13,6 @@ import { RecipeService } from 'src/app/services/recipe.service';
 export class HomeComponent implements OnInit {
 
   recipes: Array<Recipe> = recipesDummy;
-  searchValue: string = '';
   displayFooter: boolean = true;
 
   title = 'My Recipes';
@@ -22,6 +21,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.recipes = this.recipeService.getRecipes();
+  }
+
+  filterRecipes(value: string) {
+    this.recipes = recipesDummy.filter(({name: recipeName}) => recipeName.includes(value));
   }
 
   navigateToAbout() {
