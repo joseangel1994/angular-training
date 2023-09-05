@@ -1,0 +1,31 @@
+{
+    "recipes": [
+        {
+            "id": 1,
+            "name": "Pizza with tomato an olives",
+            "description": "Pizza is an iconic Italian creation, loved worldwide for its simple yet irresistible appeal. At its core, it's a round, thin crust of dough, generously adorned with flavorful tomato sauce, melted cheese (usually mozzarella), and an array of toppings limited only by your imagination.",
+            "tags": ["Pizza"],
+            "ingredients": ["Tomato", "Olives", "Cheese", "Flour", "Water"],
+            "steps": ["Prepare the dough", "Assemble the pizza", "Bake and enjoy"],
+            "photo": "assets/pizza.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Paella",
+            "description": "Paella is a vibrant and flavorful Spanish rice dish that originates from the Valencia region. It typically features saffron-infused rice cooked with a medley of ingredients such as succulent seafood, tender chicken or rabbit, assorted vegetables, and aromatic spices.",
+            "tags": ["Rice"],
+            "ingredients": ["Rice", "Meat", "Garlic", "Onion"],
+            "steps": ["Prepare the ingredients", "Cooking the Paella", "Serve and enjoy"],
+            "photo": "assets/paella.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Steak",
+            "description": "A steak dish is a carnivore's delight, showcasing a perfectly seared and juicy cut of beef, often seasoned with a simple blend of salt, pepper, and perhaps a hint of garlic or herbs.",
+            "tags": ["Steak"],
+            "ingredients": ["Steak", "Oil", "Salt"],
+            "steps": ["Preparation", "Cook the steak", "Rest and serve"],
+            "photo": "assets/steak.jpg"
+        }
+    ]
+}

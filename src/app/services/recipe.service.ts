@@ -1,15 +1,21 @@
 import { Injectable } from '@angular/core';
-import { recipesDummy } from '../dummy-data';
 import { Recipe } from '../interfaces/Recipe';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecipeService {
 
-  constructor() { }
+  url: string = 'http://localhost:3000/recipes'
 
-  getRecipes(): Array<Recipe> {
-    return recipesDummy;
+  constructor(private httpClient: HttpClient) { }
+
+  // GET recipes from the server
+  getRecipes(): Observable<Array<Recipe>> {
+    return this.httpClient.get<Array<Recipe>>(this.url);
   }
 }
+
+
