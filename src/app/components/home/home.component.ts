@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { EMPTY, catchError, filter, map, tap } from 'rxjs';
+import { EMPTY, Observable, catchError, filter, map, tap } from 'rxjs';
 
 import { recipesDummy } from 'src/app/dummy-data';
 import { Recipe } from 'src/app/interfaces/Recipe';
@@ -14,6 +14,7 @@ import { RecipeService } from 'src/app/services/recipe.service';
 export class HomeComponent implements OnInit {
 
   recipes: Array<Recipe> = recipesDummy;
+  recipes$!: Observable<Array<Recipe>>;
   displayFooter: boolean = true;
 
   title = 'My Recipes';
@@ -22,7 +23,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     // this.getRecipesSubscribe();
-    this.getRecipesPipe();
+    // this.getRecipesPipe();
+    this.getRecipesAsyncPipe();
   }
   
   getRecipesSubscribe() {
@@ -43,6 +45,17 @@ export class HomeComponent implements OnInit {
           return EMPTY;
         })
       ).subscribe(data => this.recipes = data)
+  }
+
+  getRecipesAsyncPipe() {
+    this.recipes$ = this.recipeService.getRecipes()
+      .pipe(
+        map(recipes => recipes.map(recipe => ({...recipe, name: recipe.name.toUpperCase()}))),
+        catchError((error) => {
+          console.log(error);
+          return EMPTY;
+        })
+      );
   }
 
   filterRecipes(value: string) {
