@@ -1,31 +1,120 @@
 {
-    "recipes": [
-        {
-            "id": 1,
-            "name": "Pizza with tomato an olives",
-            "description": "Pizza is an iconic Italian creation, loved worldwide for its simple yet irresistible appeal. At its core, it's a round, thin crust of dough, generously adorned with flavorful tomato sauce, melted cheese (usually mozzarella), and an array of toppings limited only by your imagination.",
-            "tags": ["Pizza"],
-            "ingredients": ["Tomato", "Olives", "Cheese", "Flour", "Water"],
-            "steps": ["Prepare the dough", "Assemble the pizza", "Bake and enjoy"],
-            "photo": "assets/pizza.jpg"
-        },
-        {
-            "id": 2,
-            "name": "Paella",
-            "description": "Paella is a vibrant and flavorful Spanish rice dish that originates from the Valencia region. It typically features saffron-infused rice cooked with a medley of ingredients such as succulent seafood, tender chicken or rabbit, assorted vegetables, and aromatic spices.",
-            "tags": ["Rice"],
-            "ingredients": ["Rice", "Meat", "Garlic", "Onion"],
-            "steps": ["Prepare the ingredients", "Cooking the Paella", "Serve and enjoy"],
-            "photo": "assets/paella.jpg"
-        },
-        {
-            "id": 3,
-            "name": "Steak",
-            "description": "A steak dish is a carnivore's delight, showcasing a perfectly seared and juicy cut of beef, often seasoned with a simple blend of salt, pepper, and perhaps a hint of garlic or herbs.",
-            "tags": ["Steak"],
-            "ingredients": ["Steak", "Oil", "Salt"],
-            "steps": ["Preparation", "Cook the steak", "Rest and serve"],
-            "photo": "assets/steak.jpg"
-        }
-    ]
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Pizza with tomato an olives",
+      "description": "Pizza is an iconic Italian creation, loved worldwide for its simple yet irresistible appeal. At its core, it's a round, thin crust of dough, generously adorned with flavorful tomato sauce, melted cheese (usually mozzarella), and an array of toppings limited only by your imagination.",
+      "tags": [
+        "Pizza"
+      ],
+      "ingredients": [
+        "Tomato",
+        "Olives",
+        "Cheese",
+        "Flour",
+        "Water"
+      ],
+      "steps": [
+        "Prepare the dough",
+        "Assemble the pizza",
+        "Bake and enjoy"
+      ],
+      "photo": "assets/pizza.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Paella",
+      "description": "Paella is a vibrant and flavorful Spanish rice dish that originates from the Valencia region. It typically features saffron-infused rice cooked with a medley of ingredients such as succulent seafood, tender chicken or rabbit, assorted vegetables, and aromatic spices.",
+      "tags": [
+        "Rice"
+      ],
+      "ingredients": [
+        "Rice",
+        "Meat",
+        "Garlic",
+        "Onion"
+      ],
+      "steps": [
+        "Prepare the ingredients",
+        "Cooking the Paella",
+        "Serve and enjoy"
+      ],
+      "photo": "assets/paella.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Steak",
+      "description": "A steak dish is a carnivore's delight, showcasing a perfectly seared and juicy cut of beef, often seasoned with a simple blend of salt, pepper, and perhaps a hint of garlic or herbs.",
+      "tags": [
+        "Steak"
+      ],
+      "ingredients": [
+        "Steak",
+        "Oil",
+        "Salt"
+      ],
+      "steps": [
+        "Preparation",
+        "Cook the steak",
+        "Rest and serve"
+      ],
+      "photo": "assets/steak.jpg"
+    },
+    {
+      "name": "Garlic Lemon Chicken",
+      "description": "A flavorful and delicious chicken recipe that is perfect for those with milk allergies.",
+      "tags": [
+        "chicken",
+        "dinner",
+        "milk-free"
+      ],
+      "ingredients": [
+        "2 boneless, skinless chicken breasts",
+        "4 cloves of garlic, minced",
+        "2 tablespoons of lemon juice",
+        "2 tablespoons of olive oil",
+        "1 teaspoon of dried oregano",
+        "Salt and black pepper to taste"
+      ],
+      "steps": [
+        "In a small bowl, mix together the minced garlic, lemon juice, olive oil, dried oregano, salt, and black pepper.",
+        "Place the chicken breasts in a resealable plastic bag and pour the marinade over them. Seal the bag and massage the marinade into the chicken.",
+        "Let the chicken marinate in the refrigerator for at least 30 minutes.",
+        "Preheat a grill or grill pan over medium-high heat.",
+        "Remove the chicken from the marinade and discard the excess marinade.",
+        "Grill the chicken for about 6-8 minutes per side, or until cooked through and the internal temperature reaches 165°F (74°C).",
+        "Remove the chicken from the grill and let it rest for a few minutes before slicing.",
+        "Serve the garlic lemon chicken with your favorite side dishes and enjoy!"
+      ],
+      "photo": "https://example.com/garlic_lemon_chicken.jpg",
+      "id": 4
+    },
+    {
+      "name": "Caprese Salad",
+      "description": "A refreshing and simple salad made with ripe tomatoes, fresh mozzarella cheese, and basil leaves.",
+      "tags": [
+        "salad",
+        "appetizer",
+        "healthy"
+      ],
+      "ingredients": [
+        "2 ripe tomatoes",
+        "8 ounces fresh mozzarella cheese",
+        "12 fresh basil leaves",
+        "2 tablespoons extra virgin olive oil",
+        "1 tablespoon balsamic vinegar",
+        "Salt and pepper to taste"
+      ],
+      "steps": [
+        "Slice the tomatoes and mozzarella cheese into 1/4-inch thick rounds.",
+        "Arrange the tomato and mozzarella slices on a serving plate, alternating between them.",
+        "Place a fresh basil leaf on top of each tomato and mozzarella slice.",
+        "Drizzle the olive oil and balsamic vinegar over the salad.",
+        "Sprinkle with salt and pepper to taste.",
+        "Serve immediately and enjoy!"
+      ],
+      "photo": "https://example.com/caprese-salad.jpg",
+      "id": 5
+    }
+  ]
 }
