@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
+import { EMPTY, mergeMap } from 'rxjs';
+import { Recipe } from 'src/app/interfaces/Recipe';
+import { RecipeService } from 'src/app/services/recipe.service';
 
 @Component({
   selector: 'app-recipe-details',
@@ -7,15 +10,21 @@ import { ActivatedRoute } from '@angular/router'
   styleUrls: ['./recipe-details.component.css']
 })
 export class RecipeDetailsComponent implements OnInit {
-  id!: string | null;
+  recipe!: Recipe;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private recipeService: RecipeService) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      this.id = params.get('id');
-      console.log(this.id);
-    })
+    this.getRecipeById();
+  }
+
+  getRecipeById() {
+    this.route.paramMap.pipe(
+      mergeMap(params => {
+        const id = params.get('id');
+        return  id ? this.recipeService.getRecipeById(id) : EMPTY;
+      })
+    ).subscribe(_recipe => this.recipe = _recipe);
   }
 
 }
